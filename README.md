@@ -1,3 +1,4 @@
+### Solved
 ### Steps
 1. Create a block plugin by command:
 ```shell
@@ -23,3 +24,11 @@ wp-env start
 ### Environment information
 1. node.js version: 20.14.0
 2. npm version: 10.7.0
+### How to Fix
+The problem is wp-scripts 28 is not compatible with wordpress 6.5.
+
+1. Open package.json, change the line "@wordpress/scripts" located to "@wordpress/scripts": "^27"
+2. run `npm install`
+3. run `npm run build`
+
+Then it works.
